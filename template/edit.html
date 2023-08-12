@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form action="" method="post">
+    {% csrf_token %}
+    
+  
+    <div class="blog-box" style="background-color :mediumorchid;">
+      
+        <header>
+          <h1 align="center">EDIT Page</h1>
+        </header>
+      
+
+        <div align="center" class="blog-box" style="background-color:lightsalmon;">
+          <br><br>
+          <input type="text" name="title" value="{{Home.title}}" >
+          <br><br>
+          <input type="text" name="content" value="{{Home.content}}" >
+
+          <!-- <textarea name ="content" value="{{Home.content}}"></textarea>  -->
+          <br><br>
+          <button type="submit">SUBMIT</button>
+    
+          <br><br>
+
+        </div>
+        
+        <footer>
+          <p>Contact us: 7652015295</p>
+          <p>Gmail: singh.versha121@gmail.com</p>
+        </footer>
+      </div>
+        
+    
+  </form>  
+</body>
+</html>

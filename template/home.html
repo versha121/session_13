@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  header {
+    background-color: #333;
+    color: yellow;
+    text-align: center;
+    padding: 10px 0;
+  }
+  main {
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .blog-box {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  .blog-box h2 {
+    color: #333;
+  }
+  footer {
+    background-color: #333;
+    color: yellow;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .submit{
+  background-color: magenta; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.box1{
+  width: 200px;
+  height: 50px;
+  background-color: lightgreen;
+  color: black;
+  border: solid brown 2px;
+}
+.box2{
+  
+  width: 400px;
+  height: 50px;
+  background-color: peachpuff;
+  color: black;
+  border: solid brown 2px;
+}
+
+
+
+
+</style>
+</head>
+<body align="center">
+  <header>
+    <h1>Home Page</h1>
+  </header>
+  <main>
+    <form action="" method="post">
+      {% csrf_token %}
+    <div class="blog-box" style="background-color :darkmagenta;">
+
+    <div class="blog-box" style="background-color: lightcoral;">
+      <input type="text" name="title" value="" placeholder="Enter the Title" class="box1">
+      <br><br>
+      <textarea name ="content"  placeholder = "Enter Your Content" class="box2"></textarea> 
+      <br><br>
+      <button type="submit" href="/">Submit</button>
+
+
+      <br><br>
+    </div>
+    </div>
+  </form>
+  <footer>
+  <p>Contact us: 7652015295</p>
+  <p>Gmail: singh.versha121@gmail.com</p>
+  </footer>
+</body>
+
+</html>
+
+
+
+
+      <!-- <h2><u>{{TECH}}</u></h2> -->
+      <!-- <p>Exploring the latest trends in technology and their impact on our lives.</p> -->
+    <!--   </main>
+  {{msg}}
+  
