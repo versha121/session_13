@@ -145,8 +145,8 @@
       <form action="/" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <hr>
-        <label id="icon" for="name"><i class="fas fa-envelope"></i></label>
-        <input type="text" name="email" id="name" placeholder="Email" required/>
+        <label id="icon" for="email"><i class="fas fa-envelope"></i></label>
+        <input type="text" name="email" id="email" placeholder="Email" required/>
         <label id="icon" for="name"><i class="fas fa-user"></i></label>
         <input type="text" name="fname" id="fname" placeholder="Father Name" required/>
         <label id="icon" for="name"><i class="fas fa-user"></i></label>
@@ -155,6 +155,8 @@
         <input type="text" name="class" id="class" placeholder="Class" required/>
         <label id="icon" for="name"><i class="fas fa-child"></i></label>
         <input type="text" name="age" id="age" placeholder="Age" required/>
+        <label id="icon" for="password"><i class="fas fa-key" id="toggelepassword"></i></label>
+        <input type="text" name="password" id="password " placeholder="Password" required/>
         <hr>
         <div class="gender">
           <input type="radio" value="none" id="male" name="gender" checked/>
