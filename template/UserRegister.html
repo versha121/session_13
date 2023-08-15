@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
+    <title>User Register</title>
 </head>
 <style>
     html, body {
@@ -142,18 +142,18 @@
   <body>
     <div class="main-block">
       <h1><b>USER REGISTER</b></h1>
-      <form action="/" method="post" enctype="multipart/form-data">
+      <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <hr>
         <label id="icon" for="email"><i class="fas fa-envelope"></i></label>
         <input type="text" name="email" id="email" placeholder="Email" required/>
-        <label id="icon" for="name"><i class="fas fa-user"></i></label>
+        <label id="icon" for="fname"><i class="fas fa-user"></i></label>
         <input type="text" name="fname" id="fname" placeholder="Father Name" required/>
         <label id="icon" for="name"><i class="fas fa-user"></i></label>
         <input type="text" name="name" id="name" placeholder="Name" required/>
-        <label id="icon" for="name"><i class="fas fa-pen"></i></label>
+        <label id="icon" for="class"><i class="fas fa-pen"></i></label>
         <input type="text" name="class" id="class" placeholder="Class" required/>
-        <label id="icon" for="name"><i class="fas fa-child"></i></label>
+        <label id="icon" for="age"><i class="fas fa-child"></i></label>
         <input type="text" name="age" id="age" placeholder="Age" required/>
         <label id="icon" for="password"><i class="fas fa-key" id="toggelepassword"></i></label>
         <input type="text" name="password" id="password " placeholder="Password" required/>

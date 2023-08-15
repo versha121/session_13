@@ -142,13 +142,13 @@
   <body>
     <div class="main-block">
       <h1><b>USER LOGIN</b></h1>
-      <form action="/" method="post" enctype="multipart/form-data">
+      <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <hr>
-        <label id="icon" for="name"><i class="fas fa-envelope"></i></label>
-        <input type="text" name="Username" id="name" placeholder="Enter your email" required/>
-        <label id="icon" for="name"><i class="fas fa-user"></i></label>
-        <input type="password" name="password" id="name" placeholder="Enter your password" required/>
+        <label id="icon" for="email"><i class="fas fa-envelope"></i></label>
+        <input type="text" name="email" id="email" placeholder="Enter your email" required/>
+        <label id="icon" for="password"><i class="fas fa-user"></i></label>
+        <input type="password" name="password" id="password" placeholder="Enter your password" required/>
         <hr>
         
         <div class="btn-block">

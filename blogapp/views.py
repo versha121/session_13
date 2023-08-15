@@ -29,36 +29,38 @@ def UserRegister(request):
         user = User()
         user.first_name= name
         user.username = email
-        user.email = email
+        # user.email = email
         user.set_password(password)
         print(user)
-        if User.objects.filter(username = user.username).first():
-            messages.error(request, "This username is already taken")
-            return redirect('/home/')
-        else:
-            user.save()
+        # if User.objects.filter(username = user.username).first():
+        #     messages.error(request, "This username is already taken")
+        #     return redirect('/home/')
+        # else:
+        user.save()
         
         
 
-        direct_to_home = 1
-        if direct_to_home == 1:
-            return redirect("/home/")
-
-
-
-    
-
-    return render (request,'UserRegister.html',{"msg":"User Registered Successfully"})
+        # direct_to_home = 1
+        # if direct_to_home == 1:
+        #     return redirect("/home/")
+        return render (request,'UserRegister.html',{"msg":"User Registered Successfully"})
+    return render (request,'UserRegister.html')
 
 
 def UserLogin(request):
+    print("In User Login ")
     if request.method=="POST":
-        username=request.POST.get("email","")
+        print("In If line 53")
+        username1=request.POST.get("Username","")
         password =request.POST.get("password","")
 
-        User = authenticate(username=username,password=password)
-        if (User!=None):
-            login(request,User)
+        print("username",username1)
+        print("password",password)
+
+        user = authenticate(username=username1,password=password)
+        print("user line 61")
+        if user is not None:
+            login(request,user)
             return redirect("/home/")
         else:
             return render(request,"UserLogin.html",{"msg": "credentials not valid"})
@@ -70,6 +72,8 @@ def home(request):
     if request.method=="POST":
         title=request.POST.get("title","")
         content=request.POST.get("content","")
+        print("request",request)
+        print(dict(request.FILES))
         
         obj=Home()
         obj.title=title
@@ -111,7 +115,7 @@ def editdata(request,id):
 
 
 
-@login_required(login_url='/Userlogin/')
+@login_required
 def deletedata(request,id):
     obj=Home.objects.get(id=id)
     obj.delete()
